@@ -3,6 +3,7 @@ const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 require("./config/cloudinaryConfig"); // Import cấu hình Cloudinary
 const corsOptions = require("./config/corsConfig"); // Import cấu hình CORS
+const cors = require("cors"); // Import thư viện cors
 const app = express();
 
 // Sử dụng CORS với các tùy chọn cấu hình
