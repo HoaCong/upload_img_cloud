@@ -10,6 +10,10 @@ app.use(cors(corsOptions));
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Upload Img Cloud");
+});
+
 app.post("/upload", upload.single("image"), (req, res) => {
   const file = req.file;
 
